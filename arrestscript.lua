@@ -12,8 +12,8 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.new(0.615686, 0.909804, 1)
-Frame.Position = UDim2.new(0.128484845, 0, 0.804213107, 0)
-Frame.Size = UDim2.new(0.225490198, 0, 0.229244113, 0)
+Frame.Position = UDim2.new(0.0978787914, 0, 0.804213107, 0)
+Frame.Size = UDim2.new(0.16427809, 0, 0.229244113, 0)
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -77,6 +77,7 @@ x.TextColor3 = Color3.new(0, 0, 0)
 x.TextScaled = true
 x.TextSize = 14
 x.TextWrapped = true
+
 
 
 
