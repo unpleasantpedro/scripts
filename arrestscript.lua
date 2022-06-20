@@ -1,17 +1,17 @@
 local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Parent = game.CoreGui
 local Frame = Instance.new("Frame")
 local TextBox = Instance.new("TextBox")
 local TextButton = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
+local x = Instance.new("TextButton")
  
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.new(0.615686, 0.909804, 1)
-Frame.Position = UDim2.new(0.0151515156, 0, 0.0384138785, 0)
+Frame.Position = UDim2.new(0.0121212127, 0, 0.69021064, 0)
 Frame.Size = UDim2.new(0, 299, 0, 185)
 
 TextBox.Parent = Frame
@@ -64,6 +64,20 @@ TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14
 TextLabel_2.TextWrapped = true
 
+x.Name = "x"
+x.Parent = Frame
+x.BackgroundColor3 = Color3.new(1, 1, 1)
+x.BackgroundTransparency = 1
+x.Position = UDim2.new(0.876254201, 0, -0.0216216221, 0)
+x.Size = UDim2.new(0, 37, 0, 35)
+x.Font = Enum.Font.SourceSansBold
+x.Text = "X"
+x.TextColor3 = Color3.new(0, 0, 0)
+x.TextScaled = true
+x.TextSize = 14
+x.TextWrapped = true
+
+
 
 
 
@@ -95,7 +109,12 @@ game:GetService("Players").LocalPlayer.Remotes.MainInvoke:InvokeServer(unpack(ar
 	end
 end
 
+local function close()
+	ScreenGui:Destroy()
+end
+
 TextButton.MouseButton1Down:Connect(test)
+x.MouseButton1Down:Connect(close)
 
 
 
