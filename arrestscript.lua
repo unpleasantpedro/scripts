@@ -202,8 +202,8 @@ local function close()
 	ScreenGui:Destroy()
 end
 local function aaaa()
-	pcall(test)
 	_G.pos = _G.user.character.HumanoidRootPart.CFrame
+	pcall(test)
 	wait(0.2)
 	_G.user.character.HumanoidRootPart.CFrame = workspace._Businesses.Buildings.PoliceStation.Jail.InteractPart.CFrame
 	wait(0.2)
@@ -220,8 +220,8 @@ wait(0.2)
 end
 
 local function out()
-	pcall(test)
 	_G.pos = _G.user.character.HumanoidRootPart.CFrame
+	pcall(test)
 	wait(0.2)
 	_G.user.character.HumanoidRootPart.CFrame = CFrame.new(-913, 119, -1514, 0.3, 0.09, 0.9, -1.2e-08, 0.99, -0.097, -0.93, 0.03, 0.3)
 	wait(0.3)
