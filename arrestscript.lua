@@ -1,14 +1,15 @@
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
-local button1 = Instance.new("TextButton")
-local jail = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local x = Instance.new("TextButton")
 local TextBox = Instance.new("TextBox")
-local button2 = Instance.new("TextButton")
+local x = Instance.new("TextButton")
+local button1 = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local jail = Instance.new("TextButton")
 local button3 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local button2 = Instance.new("TextButton")
+local button4 = Instance.new("TextButton")
  
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -18,81 +19,6 @@ Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.new(0.615686, 0.909804, 1)
 Frame.Position = UDim2.new(0.0978787914, 0, 0.804213107, 0)
 Frame.Size = UDim2.new(0.16427809, 0, 0.229244113, 0)
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
-TextButton.BackgroundTransparency = 1
-TextButton.Position = UDim2.new(0.119608797, 0, 0.494315147, 0)
-TextButton.Size = UDim2.new(0.421717495, 0, 0.270270258, 0)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "arrest"
-TextButton.TextColor3 = Color3.new(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14
-TextButton.TextWrapped = true
-
-button1.Name = "button1"
-button1.Parent = Frame
-button1.BackgroundColor3 = Color3.new(1, 1, 1)
-button1.BackgroundTransparency = 1
-button1.Position = UDim2.new(0.0827164054, 0, 0.726747215, 0)
-button1.Size = UDim2.new(0.213975683, 0, 0.270270258, 0)
-button1.Font = Enum.Font.SourceSans
-button1.Text = "kill"
-button1.TextColor3 = Color3.new(0, 0, 0)
-button1.TextScaled = true
-button1.TextSize = 14
-button1.TextWrapped = true
-
-jail.Name = "jail"
-jail.Parent = Frame
-jail.BackgroundColor3 = Color3.new(1, 1, 1)
-jail.BackgroundTransparency = 1
-jail.Position = UDim2.new(0.58076328, 0, 0.494315147, 0)
-jail.Size = UDim2.new(0.273355544, 0, 0.270270258, 0)
-jail.Font = Enum.Font.SourceSans
-jail.Text = "jail"
-jail.TextColor3 = Color3.new(0, 0, 0)
-jail.TextScaled = true
-jail.TextSize = 14
-jail.TextWrapped = true
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.new(0.541176, 0.854902, 1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Position = UDim2.new(0, 0, 1, 0)
-TextLabel.Size = UDim2.new(1, 0, 0.340540528, 0)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "player must be on criminal team, you must hold handcuffs out"
-TextLabel.TextColor3 = Color3.new(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14
-TextLabel.TextWrapped = true
-
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel_2.BackgroundTransparency = 1
-TextLabel_2.Position = UDim2.new(0.0702341124, 0, 0, 0)
-TextLabel_2.Size = UDim2.new(0.852842808, 0, 0.151351348, 0)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "pedros crappy script"
-TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14
-TextLabel_2.TextWrapped = true
-
-x.Name = "x"
-x.Parent = Frame
-x.BackgroundColor3 = Color3.new(1, 1, 1)
-x.BackgroundTransparency = 1
-x.Position = UDim2.new(0.876254201, 0, -0.0216216221, 0)
-x.Size = UDim2.new(0.123745821, 0, 0.189189196, 0)
-x.Font = Enum.Font.SourceSansBold
-x.Text = "X"
-x.TextColor3 = Color3.new(0, 0, 0)
-x.TextScaled = true
-x.TextSize = 14
-x.TextWrapped = true
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -108,18 +34,68 @@ TextBox.TextScaled = true
 TextBox.TextSize = 14
 TextBox.TextWrapped = true
 
-button2.Name = "button2"
-button2.Parent = Frame
-button2.BackgroundColor3 = Color3.new(1, 1, 1)
-button2.BackgroundTransparency = 1
-button2.Position = UDim2.new(0.337273717, 0, 0.726747274, 0)
-button2.Size = UDim2.new(0.274148107, 0, 0.270270258, 0)
-button2.Font = Enum.Font.SourceSans
-button2.Text = "free"
-button2.TextColor3 = Color3.new(0, 0, 0)
-button2.TextScaled = true
-button2.TextSize = 14
-button2.TextWrapped = true
+x.Name = "x"
+x.Parent = Frame
+x.BackgroundColor3 = Color3.new(1, 1, 1)
+x.BackgroundTransparency = 1
+x.Position = UDim2.new(0.876254201, 0, -0.0216216221, 0)
+x.Size = UDim2.new(0.123745821, 0, 0.189189196, 0)
+x.Font = Enum.Font.SourceSansBold
+x.Text = "X"
+x.TextColor3 = Color3.new(0, 0, 0)
+x.TextScaled = true
+x.TextSize = 14
+x.TextWrapped = true
+
+button1.Name = "button1"
+button1.Parent = Frame
+button1.BackgroundColor3 = Color3.new(1, 1, 1)
+button1.BackgroundTransparency = 1
+button1.Position = UDim2.new(0.0827164054, 0, 0.726747215, 0)
+button1.Size = UDim2.new(0.213975683, 0, 0.270270258, 0)
+button1.Font = Enum.Font.SourceSans
+button1.Text = "kill"
+button1.TextColor3 = Color3.new(0, 0, 0)
+button1.TextScaled = true
+button1.TextSize = 14
+button1.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundTransparency = 1
+TextButton.Position = UDim2.new(0.0384456068, 0, 0.494315147, 0)
+TextButton.Size = UDim2.new(0.421717495, 0, 0.270270258, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "arrest"
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.0702341124, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.852842808, 0, 0.151351348, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "pedros crappy script"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+jail.Name = "jail"
+jail.Parent = Frame
+jail.BackgroundColor3 = Color3.new(1, 1, 1)
+jail.BackgroundTransparency = 1
+jail.Position = UDim2.new(0.459018499, 0, 0.494315147, 0)
+jail.Size = UDim2.new(0.273355544, 0, 0.270270258, 0)
+jail.Font = Enum.Font.SourceSans
+jail.Text = "jail"
+jail.TextColor3 = Color3.new(0, 0, 0)
+jail.TextScaled = true
+jail.TextSize = 14
+jail.TextWrapped = true
 
 button3.Name = "button3"
 button3.Parent = Frame
@@ -133,6 +109,48 @@ button3.TextColor3 = Color3.new(0, 0, 0)
 button3.TextScaled = true
 button3.TextSize = 14
 button3.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.new(0.541176, 0.854902, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_2.Size = UDim2.new(1, 0, 0.340540528, 0)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "player must be on criminal team, you must hold handcuffs out"
+TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextWrapped = true
+
+button2.Name = "button2"
+button2.Parent = Frame
+button2.BackgroundColor3 = Color3.new(1, 1, 1)
+button2.BackgroundTransparency = 1
+button2.Position = UDim2.new(0.337273717, 0, 0.726747274, 0)
+button2.Size = UDim2.new(0.274148107, 0, 0.270270258, 0)
+button2.Font = Enum.Font.SourceSans
+button2.Text = "free"
+button2.TextColor3 = Color3.new(0, 0, 0)
+button2.TextScaled = true
+button2.TextSize = 14
+button2.TextWrapped = true
+
+button4.Name = "button4"
+button4.Parent = Frame
+button4.BackgroundColor3 = Color3.new(1, 1, 1)
+button4.BackgroundTransparency = 1
+button4.Position = UDim2.new(0.724643469, 0, 0.494315147, 0)
+button4.Size = UDim2.new(0.273355544, 0, 0.270270258, 0)
+button4.Font = Enum.Font.SourceSans
+button4.Text = "car"
+button4.TextColor3 = Color3.new(0, 0, 0)
+button4.TextScaled = true
+button4.TextSize = 14
+button4.TextWrapped = true
+
+
+
+
 
 
 
@@ -269,12 +287,34 @@ local function bring()
 
 					game:GetService("Players").LocalPlayer.Remotes.MainInvoke:InvokeServer(unpack(args))
 end
+
+local function a()
+	for _, car in pairs(game.Workspace._SpawnedCars:GetDescendants()) do
+   	 	if car:IsA("ObjectValue") then
+			print("aaa")
+			if car.Value == game.Players.LocalPlayer then
+				print("a2")
+				pcall(test)
+				wait(0.1)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = car.Parent.Body.Main.CFrame
+				wait(0.3)
+				_G.bigcar = car.Parent
+			end
+		enda
+	end
+end
+
+
+				
+					
 TextButton.MouseButton1Down:Connect(test)
 x.MouseButton1Down:Connect(close)
 button1.MouseButton1Down:Connect(test2)
 jail.MouseButton1Down:Connect(aaaa)
 button2.MouseButton1Down:Connect(out)
 button3.MouseButton1Down:Connect(bring)
+button4.MouseButton1Down:Connect(a)
+
 
 
 
