@@ -8,6 +8,7 @@ local TextLabel_2 = Instance.new("TextLabel")
 local x = Instance.new("TextButton")
 local TextBox = Instance.new("TextBox")
 local button2 = Instance.new("TextButton")
+local button3 = Instance.new("TextButton")
  
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -34,7 +35,7 @@ button1.Name = "button1"
 button1.Parent = Frame
 button1.BackgroundColor3 = Color3.new(1, 1, 1)
 button1.BackgroundTransparency = 1
-button1.Position = UDim2.new(-0.0980561376, 0, 0.726747453, 0)
+button1.Position = UDim2.new(-0.157083914, 0, 0.726747453, 0)
 button1.Size = UDim2.new(0.668896317, 0, 0.270270258, 0)
 button1.Font = Enum.Font.SourceSans
 button1.Text = "kill"
@@ -47,7 +48,7 @@ jail.Name = "jail"
 jail.Parent = Frame
 jail.BackgroundColor3 = Color3.new(1, 1, 1)
 jail.BackgroundTransparency = 1
-jail.Position = UDim2.new(0.459018499, 0, 0.494315028, 0)
+jail.Position = UDim2.new(0.296692133, 0, 0.494315028, 0)
 jail.Size = UDim2.new(0.668896317, 0, 0.270270258, 0)
 jail.Font = Enum.Font.SourceSans
 jail.Text = "jail"
@@ -111,7 +112,7 @@ button2.Name = "button2"
 button2.Parent = Frame
 button2.BackgroundColor3 = Color3.new(1, 1, 1)
 button2.BackgroundTransparency = 1
-button2.Position = UDim2.new(0.38154453, 0, 0.726747453, 0)
+button2.Position = UDim2.new(0.126987249, 0, 0.726747453, 0)
 button2.Size = UDim2.new(0.668896317, 0, 0.270270258, 0)
 button2.Font = Enum.Font.SourceSans
 button2.Text = "free"
@@ -119,6 +120,20 @@ button2.TextColor3 = Color3.new(0, 0, 0)
 button2.TextScaled = true
 button2.TextSize = 14
 button2.TextWrapped = true
+
+button3.Name = "button3"
+button3.Parent = Frame
+button3.BackgroundColor3 = Color3.new(1, 1, 1)
+button3.BackgroundTransparency = 1
+button3.Position = UDim2.new(0.481153905, 0, 0.726747453, 0)
+button3.Size = UDim2.new(0.668896317, 0, 0.270270258, 0)
+button3.Font = Enum.Font.SourceSans
+button3.Text = "bring"
+button3.TextColor3 = Color3.new(0, 0, 0)
+button3.TextScaled = true
+button3.TextSize = 14
+button3.TextWrapped = true
+
 
 
 
@@ -202,6 +217,7 @@ local function close()
 	ScreenGui:Destroy()
 end
 local function aaaa()
+	_G.user = game.Players.LocalPlayer
 	_G.pos = _G.user.character.HumanoidRootPart.CFrame
 	pcall(test)
 	wait(0.2)
@@ -220,6 +236,7 @@ wait(0.2)
 end
 
 local function out()
+	_G.user = game.Players.LocalPlayer
 	_G.pos = _G.user.character.HumanoidRootPart.CFrame
 	pcall(test)
 	wait(0.2)
@@ -235,11 +252,28 @@ local function out()
 					wait(0.2)
 					_G.user.character.HumanoidRootPart.CFrame = _G.pos
 end
+
+local function bring()
+	_G.user = game.Players.LocalPlayer
+	_G.pos = _G.user.character.HumanoidRootPart.CFrame
+	pcall(test)
+	wait(0.2)
+	_G.user.character.HumanoidRootPart.CFrame = _G.pos
+	wait(0.2)
+	local args = {
+   					 [1] = {
+      				  ["Event"] = "DropPlayer"
+   							 }
+						}
+
+					game:GetService("Players").LocalPlayer.Remotes.MainInvoke:InvokeServer(unpack(args))
+end
 TextButton.MouseButton1Down:Connect(test)
 x.MouseButton1Down:Connect(close)
 button1.MouseButton1Down:Connect(test2)
 jail.MouseButton1Down:Connect(aaaa)
 button2.MouseButton1Down:Connect(out)
+button3.MouseButton1Down:Connect(bring)
 
 
 
