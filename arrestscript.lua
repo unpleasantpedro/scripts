@@ -10,16 +10,17 @@ ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame.BackgroundColor3 = Color3.new(0.615686, 0.909804, 1)
-Frame.Position = UDim2.new(0.0121212127, 0, 0.69021064, 0)
-Frame.Size = UDim2.new(0, 299, 0, 185)
+Frame.Position = UDim2.new(0.128484845, 0, 0.804213107, 0)
+Frame.Size = UDim2.new(0.225490198, 0, 0.229244113, 0)
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
 TextBox.BorderColor3 = Color3.new(1, 1, 1)
 TextBox.BorderSizePixel = 3
 TextBox.Position = UDim2.new(0.0702341124, 0, 0.206896558, 0)
-TextBox.Size = UDim2.new(0, 256, 0, 54)
+TextBox.Size = UDim2.new(0.856187224, 0, 0.291891903, 0)
 TextBox.Font = Enum.Font.SourceSans
 TextBox.PlaceholderText = "name go here"
 TextBox.Text = ""
@@ -32,7 +33,7 @@ TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton.BackgroundTransparency = 1
 TextButton.Position = UDim2.new(0.163879603, 0, 0.586206913, 0)
-TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Size = UDim2.new(0.668896317, 0, 0.270270258, 0)
 TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = "arrest"
 TextButton.TextColor3 = Color3.new(0, 0, 0)
@@ -44,7 +45,7 @@ TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel.BackgroundTransparency = 1
 TextLabel.Position = UDim2.new(0.0702341124, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 255, 0, 28)
+TextLabel.Size = UDim2.new(0.852842808, 0, 0.151351348, 0)
 TextLabel.Font = Enum.Font.SourceSans
 TextLabel.Text = "pedros crappy script"
 TextLabel.TextColor3 = Color3.new(0, 0, 0)
@@ -56,7 +57,7 @@ TextLabel_2.Parent = Frame
 TextLabel_2.BackgroundColor3 = Color3.new(0.541176, 0.854902, 1)
 TextLabel_2.BackgroundTransparency = 1
 TextLabel_2.Position = UDim2.new(0, 0, 1, 0)
-TextLabel_2.Size = UDim2.new(0, 299, 0, 63)
+TextLabel_2.Size = UDim2.new(1, 0, 0.340540528, 0)
 TextLabel_2.Font = Enum.Font.SourceSans
 TextLabel_2.Text = "player must be on criminal team, you must hold handcuffs out"
 TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
@@ -69,13 +70,14 @@ x.Parent = Frame
 x.BackgroundColor3 = Color3.new(1, 1, 1)
 x.BackgroundTransparency = 1
 x.Position = UDim2.new(0.876254201, 0, -0.0216216221, 0)
-x.Size = UDim2.new(0, 37, 0, 35)
+x.Size = UDim2.new(0.123745821, 0, 0.189189196, 0)
 x.Font = Enum.Font.SourceSansBold
 x.Text = "X"
 x.TextColor3 = Color3.new(0, 0, 0)
 x.TextScaled = true
 x.TextSize = 14
 x.TextWrapped = true
+
 
 
 
