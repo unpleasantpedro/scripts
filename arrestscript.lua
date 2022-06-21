@@ -11,6 +11,7 @@ local button3 = Instance.new("TextButton")
 local button2 = Instance.new("TextButton")
 local TextBox = Instance.new("TextBox")
  
+
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -144,11 +145,64 @@ TextBox.TextScaled = true
 TextBox.TextSize = 14
 TextBox.TextWrapped = true
 
+local UIS = game:GetService('UserInputService')
+local frame = Frame
+local dragToggle = nil
+local dragSpeed = 0.25
+local dragStart = nil
+local startPos = nil
+
+local function updateInput(input)
+ local delta = input.Position - dragStart
+ local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+  startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+ game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+end
+
+frame.InputBegan:Connect(function(input)
+ if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+  dragToggle = true
+  dragStart = input.Position
+  startPos = frame.Position
+  input.Changed:Connect(function()
+   if input.UserInputState == Enum.UserInputState.End then
+    dragToggle = false
+   end
+  end)
+ end
+end)
+
+UIS.InputChanged:Connect(function(input)
+ if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+  if dragToggle then
+   updateInput(input)
+  end
+ end
+end)
+
+
+TextBox:GetPropertyChangedSignal("Text"):Connect(function()
+	print("aaaaaa")
+	local foundPlayer = nil
+	local Players = game.Players:GetPlayers()
+	for i = 1, #Players do
+		local CurrentPlayer = Players[i]
+		if string.lower(CurrentPlayer.Name):sub(1, #TextBox.Text) == string.lower(TextBox.Text) then
+			foundPlayer = CurrentPlayer.Name
+			TextBox.PlaceholderText = CurrentPlayer.Name
+			break
+		end
+	end
+
+	return foundPlayer
+end)
+
+
 
 
 
 local function test()
-	_G.target = TextBox.Text
+	_G.target = TextBox.PlaceholderText
 	if _G.target then
 		print(_G.target)
 		_G.targetplr = game:GetService("Players"):FindFirstChild(_G.target)
@@ -176,7 +230,7 @@ local function test()
 end
 
 local function test2()
-	_G.target = TextBox.Text
+	_G.target = TextBox.PlaceholderText
 	if _G.target then
 		print(_G.target)
 		_G.targetplr = game:GetService("Players"):FindFirstChild(_G.target)
