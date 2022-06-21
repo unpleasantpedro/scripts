@@ -1,8 +1,7 @@
 local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
-local x = Instance.new("TextButton")
-local Frame_2 = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 local jail = Instance.new("TextButton")
 local button4 = Instance.new("TextButton")
@@ -10,17 +9,26 @@ local button1 = Instance.new("TextButton")
 local button3 = Instance.new("TextButton")
 local button2 = Instance.new("TextButton")
 local TextBox = Instance.new("TextBox")
+local Frame_2 = Instance.new("Frame")
+local x = Instance.new("TextButton")
  
-
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = ScreenGui
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+main.BorderColor3 = Color3.new(1, 0.47451, 0.47451)
+main.BorderSizePixel = 3
+main.Position = UDim2.new(0.0204230621, 0, 0.734820426, 0)
+main.Size = UDim2.new(0, 22, 0, 196)
+
+Frame.Parent = main
 Frame.BackgroundColor3 = Color3.new(0.247059, 0.247059, 0.247059)
 Frame.BorderColor3 = Color3.new(1, 0.47451, 0.47451)
 Frame.BorderSizePixel = 3
-Frame.Position = UDim2.new(0.0211161394, 0, 0.733581185, 0)
-Frame.Size = UDim2.new(0.251131237, 0, 0.247831479, 0)
+Frame.Position = UDim2.new(0.99170804, 0, 0, 0)
+Frame.Size = UDim2.new(17.4122906, 0, 0.99999994, 0)
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -33,25 +41,6 @@ TextLabel.TextColor3 = Color3.new(1, 0.47451, 0.47451)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14
 TextLabel.TextWrapped = true
-
-x.Name = "x"
-x.Parent = Frame
-x.BackgroundColor3 = Color3.new(1, 1, 1)
-x.BackgroundTransparency = 1
-x.Position = UDim2.new(0.873873889, 0, 0, 0)
-x.Size = UDim2.new(0.126126125, 0, 0.209999993, 0)
-x.Font = Enum.Font.Jura
-x.Text = "X"
-x.TextColor3 = Color3.new(1, 0.47451, 0.47451)
-x.TextScaled = true
-x.TextSize = 14
-x.TextWrapped = true
-
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.new(1, 0.47451, 0.47451)
-Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(0.033033032, 0, 0.209999993, 0)
-Frame_2.Size = UDim2.new(0.516516507, 0, 0.0149999997, 0)
 
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -145,8 +134,29 @@ TextBox.TextScaled = true
 TextBox.TextSize = 14
 TextBox.TextWrapped = true
 
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.new(1, 0.47451, 0.47451)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.033033032, 0, 0.209999993, 0)
+Frame_2.Size = UDim2.new(0.516516507, 0, 0.0149999997, 0)
+
+x.Name = "x"
+x.Parent = main
+x.BackgroundColor3 = Color3.new(1, 1, 1)
+x.BackgroundTransparency = 1
+x.Position = UDim2.new(-0.126126111, 0, 0, 0)
+x.Rotation = 90
+x.Size = UDim2.new(1.20874321, 0, 0.133678615, 0)
+x.Font = Enum.Font.Jura
+x.Text = ">"
+x.TextColor3 = Color3.new(1, 0.47451, 0.47451)
+x.TextScaled = true
+x.TextSize = 14
+x.TextWrapped = true
+
+
 local UIS = game:GetService('UserInputService')
-local frame = Frame
+local frame = main
 local dragToggle = nil
 local dragSpeed = 0.25
 local dragStart = nil
@@ -271,9 +281,22 @@ local function test2()
 end
 
 
+
 local function close()
-	ScreenGui:Destroy()
+	print(_G.opened)
+	if _G.opened == true or _G.opened == nil then
+		Frame:TweenSize(UDim2.new(0, 0, 1, 0, "InOut", "Quad", 0.5))
+		_G.opened = false
+		return(false)
+	elseif _G.opened == false then
+		Frame:TweenSize(UDim2.new(17.412, 0, 1, 0, "InOut", "Quad", 0.5))
+		_G.opened = true
+		return(true)
+	end
 end
+
+_G.opened = close()
+
 local function aaaa()
 	_G.user = game.Players.LocalPlayer
 	_G.pos = _G.user.character.HumanoidRootPart.CFrame
@@ -285,11 +308,11 @@ local function aaaa()
     [1] = {
         ["Event"] = "ImprisonPlayer",
         ["cell"] = workspace._Businesses.Buildings.PoliceStation.Jail.InteractPart
-    }
-}
+   			 }
+			}
 
-game:GetService("Players").LocalPlayer.Remotes.MainInvoke:InvokeServer(unpack(args))
-wait(0.2)
+			game:GetService("Players").LocalPlayer.Remotes.MainInvoke:InvokeServer(unpack(args))
+				wait(0.2)
 					_G.user.character.HumanoidRootPart.CFrame = _G.pos
 end
 
