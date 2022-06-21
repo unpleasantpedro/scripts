@@ -1,163 +1,148 @@
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
-local TextBox = Instance.new("TextBox")
-local x = Instance.new("TextButton")
-local button1 = Instance.new("TextButton")
-local TextButton = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
+local x = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
 local jail = Instance.new("TextButton")
-local button3 = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
-local button2 = Instance.new("TextButton")
 local button4 = Instance.new("TextButton")
+local button1 = Instance.new("TextButton")
+local button3 = Instance.new("TextButton")
+local button2 = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
  
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
-Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame.BackgroundColor3 = Color3.new(0.615686, 0.909804, 1)
-Frame.Position = UDim2.new(0.0978787914, 0, 0.804213107, 0)
-Frame.Size = UDim2.new(0.16427809, 0, 0.229244113, 0)
+Frame.BackgroundColor3 = Color3.new(0.247059, 0.247059, 0.247059)
+Frame.BorderColor3 = Color3.new(1, 0.47451, 0.47451)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0.0211161394, 0, 0.733581185, 0)
+Frame.Size = UDim2.new(0.251131237, 0, 0.247831479, 0)
 
-TextBox.Parent = Frame
-TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
-TextBox.BorderColor3 = Color3.new(1, 1, 1)
-TextBox.BorderSizePixel = 3
-TextBox.Position = UDim2.new(0.0702341124, 0, 0.206896558, 0)
-TextBox.Size = UDim2.new(0.856187224, 0, 0.291891903, 0)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderText = "name go here"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.new(0, 0, 0)
-TextBox.TextScaled = true
-TextBox.TextSize = 14
-TextBox.TextWrapped = true
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.0330330357, 0, 0, 0)
+TextLabel.Size = UDim2.new(0.516516447, 0, 0.209999993, 0)
+TextLabel.Font = Enum.Font.Jura
+TextLabel.Text = "pedro crap"
+TextLabel.TextColor3 = Color3.new(1, 0.47451, 0.47451)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
 
 x.Name = "x"
 x.Parent = Frame
 x.BackgroundColor3 = Color3.new(1, 1, 1)
 x.BackgroundTransparency = 1
-x.Position = UDim2.new(0.876254201, 0, -0.0216216221, 0)
-x.Size = UDim2.new(0.123745821, 0, 0.189189196, 0)
-x.Font = Enum.Font.SourceSansBold
+x.Position = UDim2.new(0.873873889, 0, 0, 0)
+x.Size = UDim2.new(0.126126125, 0, 0.209999993, 0)
+x.Font = Enum.Font.Jura
 x.Text = "X"
-x.TextColor3 = Color3.new(0, 0, 0)
+x.TextColor3 = Color3.new(1, 0.47451, 0.47451)
 x.TextScaled = true
 x.TextSize = 14
 x.TextWrapped = true
 
-button1.Name = "button1"
-button1.Parent = Frame
-button1.BackgroundColor3 = Color3.new(1, 1, 1)
-button1.BackgroundTransparency = 1
-button1.Position = UDim2.new(0.0827164054, 0, 0.726747215, 0)
-button1.Size = UDim2.new(0.213975683, 0, 0.270270258, 0)
-button1.Font = Enum.Font.SourceSans
-button1.Text = "kill"
-button1.TextColor3 = Color3.new(0, 0, 0)
-button1.TextScaled = true
-button1.TextSize = 14
-button1.TextWrapped = true
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.new(1, 0.47451, 0.47451)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.033033032, 0, 0.209999993, 0)
+Frame_2.Size = UDim2.new(0.516516507, 0, 0.0149999997, 0)
 
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton.BackgroundTransparency = 1
-TextButton.Position = UDim2.new(0.0384456068, 0, 0.494315147, 0)
-TextButton.Size = UDim2.new(0.421717495, 0, 0.270270258, 0)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "arrest"
-TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.Position = UDim2.new(0.0480480492, 0, 0.555000007, 0)
+TextButton.Size = UDim2.new(0.258258253, 0, 0.189999998, 0)
+TextButton.Font = Enum.Font.Jura
+TextButton.Text = "ARREST"
+TextButton.TextColor3 = Color3.new(1, 0.47451, 0.47451)
 TextButton.TextScaled = true
 TextButton.TextSize = 14
 TextButton.TextWrapped = true
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Position = UDim2.new(0.0702341124, 0, 0, 0)
-TextLabel.Size = UDim2.new(0.852842808, 0, 0.151351348, 0)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "pedros crappy script"
-TextLabel.TextColor3 = Color3.new(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14
-TextLabel.TextWrapped = true
 
 jail.Name = "jail"
 jail.Parent = Frame
 jail.BackgroundColor3 = Color3.new(1, 1, 1)
 jail.BackgroundTransparency = 1
-jail.Position = UDim2.new(0.459018499, 0, 0.494315147, 0)
-jail.Size = UDim2.new(0.273355544, 0, 0.270270258, 0)
-jail.Font = Enum.Font.SourceSans
-jail.Text = "jail"
-jail.TextColor3 = Color3.new(0, 0, 0)
+jail.Position = UDim2.new(0.366366386, 0, 0.555000007, 0)
+jail.Size = UDim2.new(0.258258253, 0, 0.189999998, 0)
+jail.Font = Enum.Font.Jura
+jail.Text = "JAIL"
+jail.TextColor3 = Color3.new(1, 0.47451, 0.47451)
 jail.TextScaled = true
 jail.TextSize = 14
 jail.TextWrapped = true
-
-button3.Name = "button3"
-button3.Parent = Frame
-button3.BackgroundColor3 = Color3.new(1, 1, 1)
-button3.BackgroundTransparency = 1
-button3.Position = UDim2.new(0.610277176, 0, 0.726747274, 0)
-button3.Size = UDim2.new(0.355311364, 0, 0.270270258, 0)
-button3.Font = Enum.Font.SourceSans
-button3.Text = "bring"
-button3.TextColor3 = Color3.new(0, 0, 0)
-button3.TextScaled = true
-button3.TextSize = 14
-button3.TextWrapped = true
-
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.new(0.541176, 0.854902, 1)
-TextLabel_2.BackgroundTransparency = 1
-TextLabel_2.Position = UDim2.new(0, 0, 1, 0)
-TextLabel_2.Size = UDim2.new(1, 0, 0.340540528, 0)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "player must be on criminal team, you must hold handcuffs out"
-TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14
-TextLabel_2.TextWrapped = true
-
-button2.Name = "button2"
-button2.Parent = Frame
-button2.BackgroundColor3 = Color3.new(1, 1, 1)
-button2.BackgroundTransparency = 1
-button2.Position = UDim2.new(0.337273717, 0, 0.726747274, 0)
-button2.Size = UDim2.new(0.274148107, 0, 0.270270258, 0)
-button2.Font = Enum.Font.SourceSans
-button2.Text = "free"
-button2.TextColor3 = Color3.new(0, 0, 0)
-button2.TextScaled = true
-button2.TextSize = 14
-button2.TextWrapped = true
 
 button4.Name = "button4"
 button4.Parent = Frame
 button4.BackgroundColor3 = Color3.new(1, 1, 1)
 button4.BackgroundTransparency = 1
-button4.Position = UDim2.new(0.724643469, 0, 0.494315147, 0)
-button4.Size = UDim2.new(0.273355544, 0, 0.270270258, 0)
-button4.Font = Enum.Font.SourceSans
-button4.Text = "car"
-button4.TextColor3 = Color3.new(0, 0, 0)
+button4.Position = UDim2.new(0.696696699, 0, 0.555000007, 0)
+button4.Size = UDim2.new(0.258258253, 0, 0.189999998, 0)
+button4.Font = Enum.Font.Jura
+button4.Text = "CAR"
+button4.TextColor3 = Color3.new(1, 0.47451, 0.47451)
 button4.TextScaled = true
 button4.TextSize = 14
 button4.TextWrapped = true
 
+button1.Name = "button1"
+button1.Parent = Frame
+button1.BackgroundColor3 = Color3.new(1, 1, 1)
+button1.BackgroundTransparency = 1
+button1.Position = UDim2.new(0.0420420393, 0, 0.745000005, 0)
+button1.Size = UDim2.new(0.258258253, 0, 0.189999998, 0)
+button1.Font = Enum.Font.Jura
+button1.Text = "KILL"
+button1.TextColor3 = Color3.new(1, 0.47451, 0.47451)
+button1.TextScaled = true
+button1.TextSize = 14
+button1.TextWrapped = true
 
+button3.Name = "button3"
+button3.Parent = Frame
+button3.BackgroundColor3 = Color3.new(1, 1, 1)
+button3.BackgroundTransparency = 1
+button3.Position = UDim2.new(0.360360384, 0, 0.745000005, 0)
+button3.Size = UDim2.new(0.258258253, 0, 0.189999998, 0)
+button3.Font = Enum.Font.Jura
+button3.Text = "BRING"
+button3.TextColor3 = Color3.new(1, 0.47451, 0.47451)
+button3.TextScaled = true
+button3.TextSize = 14
+button3.TextWrapped = true
 
+button2.Name = "button2"
+button2.Parent = Frame
+button2.BackgroundColor3 = Color3.new(1, 1, 1)
+button2.BackgroundTransparency = 1
+button2.Position = UDim2.new(0.690690696, 0, 0.745000005, 0)
+button2.Size = UDim2.new(0.258258253, 0, 0.189999998, 0)
+button2.Font = Enum.Font.Jura
+button2.Text = "FREE"
+button2.TextColor3 = Color3.new(1, 0.47451, 0.47451)
+button2.TextScaled = true
+button2.TextSize = 14
+button2.TextWrapped = true
 
-
-
-
-
-
-
-
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.new(0.223529, 0.223529, 0.223529)
+TextBox.BorderColor3 = Color3.new(1, 0.47451, 0.47451)
+TextBox.BorderSizePixel = 3
+TextBox.Position = UDim2.new(0.033033032, 0, 0.270000011, 0)
+TextBox.Size = UDim2.new(0.516516507, 0, 0.25, 0)
+TextBox.Font = Enum.Font.Jura
+TextBox.PlaceholderColor3 = Color3.new(0.580392, 0.27451, 0.27451)
+TextBox.PlaceholderText = "TARGET"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.new(1, 0.47451, 0.47451)
+TextBox.TextScaled = true
+TextBox.TextSize = 14
+TextBox.TextWrapped = true
 
 
 
@@ -300,7 +285,7 @@ local function a()
 				wait(0.3)
 				_G.bigcar = car.Parent
 			end
-		enda
+		end
 	end
 end
 
