@@ -405,9 +405,13 @@ local function annoy2()
 	print(getgenv().annoyvalue)
 	if getgenv().annoyvalue == false then
 		getgenv().annoyvalue = true
+		print("the value is now TRUE")
+		pcall(annoy)
 		button5.Text = "X"
 	elseif getgenv().annoyvalue == true then
 		getgenv().annoyvalue = false
+		print("the value is now FALSE")
+		pcall(annoy)
 		button5.Text = " "
 	end
 end
@@ -419,11 +423,12 @@ button5.MouseButton1Down:Connect(annoy2)
 
 
 function annoy()
+	print(getgenv().annoyvalue)
 	spawn(function()
 		while getgenv().annoyvalue == true do
 			wait(0.2)
-			_G.user = game.Players.LocalPlayer
 			_G.target = TextBox.PlaceholderText
+			_G.user = game.Players.LocalPlayer
 			if _G.target then
 				_G.targetplr = game:GetService("Players"):FindFirstChild(_G.target)
 				if _G.targetplr ~= nil and _G.targetplr.character ~= nil then
