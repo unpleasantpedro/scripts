@@ -10,6 +10,8 @@ local button3 = Instance.new("TextButton")
 local button2 = Instance.new("TextButton")
 local TextBox = Instance.new("TextBox")
 local Frame_2 = Instance.new("Frame")
+local button5 = Instance.new("TextButton")
+local annoylbl = Instance.new("TextLabel")
 local x = Instance.new("TextButton")
  
 ScreenGui.Parent = game.CoreGui
@@ -28,7 +30,7 @@ Frame.BackgroundColor3 = Color3.new(0.247059, 0.247059, 0.247059)
 Frame.BorderColor3 = Color3.new(1, 0.47451, 0.47451)
 Frame.BorderSizePixel = 3
 Frame.Position = UDim2.new(0.99170804, 0, 0, 0)
-Frame.Size = UDim2.new(17.4122906, 0, 0.99999994, 0)
+Frame.Size = UDim2.new(16.636364, 0, 1, 0)
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -36,7 +38,7 @@ TextLabel.BackgroundTransparency = 1
 TextLabel.Position = UDim2.new(0.0330330357, 0, 0, 0)
 TextLabel.Size = UDim2.new(0.516516447, 0, 0.209999993, 0)
 TextLabel.Font = Enum.Font.Jura
-TextLabel.Text = "pedro crap"
+TextLabel.Text = "pedro script"
 TextLabel.TextColor3 = Color3.new(1, 0.47451, 0.47451)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14
@@ -140,6 +142,34 @@ Frame_2.BorderSizePixel = 0
 Frame_2.Position = UDim2.new(0.033033032, 0, 0.209999993, 0)
 Frame_2.Size = UDim2.new(0.516516507, 0, 0.0149999997, 0)
 
+button5.Name = "button5"
+button5.Parent = Frame
+button5.BackgroundColor3 = Color3.new(0.223529, 0.223529, 0.223529)
+button5.BorderColor3 = Color3.new(1, 0.47451, 0.47451)
+button5.BorderSizePixel = 3
+button5.Position = UDim2.new(0.601092815, 0, 0.269999921, 0)
+button5.Size = UDim2.new(0.123, 0, 0.245, 0)
+button5.Font = Enum.Font.Jura
+button5.Text = " "
+button5.TextColor3 = Color3.new(1, 0.47451, 0.47451)
+button5.TextScaled = true
+button5.TextSize = 14
+button5.TextStrokeColor3 = Color3.new(1, 0.47451, 0.47451)
+button5.TextWrapped = true
+
+annoylbl.Name = "annoylbl"
+annoylbl.Parent = Frame
+annoylbl.BackgroundColor3 = Color3.new(1, 1, 1)
+annoylbl.BackgroundTransparency = 1
+annoylbl.Position = UDim2.new(0.762295067, 0, 0.265306115, 0)
+annoylbl.Size = UDim2.new(0.191, 0, 0.255, 0)
+annoylbl.Font = Enum.Font.Jura
+annoylbl.Text = "ANNOY"
+annoylbl.TextColor3 = Color3.new(1, 0.47451, 0.47451)
+annoylbl.TextScaled = true
+annoylbl.TextSize = 14
+annoylbl.TextWrapped = true
+
 x.Name = "x"
 x.Parent = main
 x.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -153,6 +183,7 @@ x.TextColor3 = Color3.new(1, 0.47451, 0.47451)
 x.TextScaled = true
 x.TextSize = 14
 x.TextWrapped = true
+
 
 
 local UIS = game:GetService('UserInputService')
@@ -209,7 +240,7 @@ end)
 
 
 
-
+getgenv().annoyvalue = false
 
 local function test()
 	_G.target = TextBox.PlaceholderText
@@ -366,6 +397,91 @@ local function a()
 	end
 end
 
+
+
+
+
+local function annoy2()
+	print(getgenv().annoyvalue)
+	if getgenv().annoyvalue == false then
+		getgenv().annoyvalue = true
+		button5.Text = "X"
+	elseif getgenv().annoyvalue == true then
+		getgenv().annoyvalue = false
+		button5.Text = " "
+	end
+end
+
+
+
+
+button5.MouseButton1Down:Connect(annoy2)
+
+
+function annoy()
+	spawn(function()
+		while getgenv().annoyvalue == true do
+			wait(0.2)
+			_G.user = game.Players.LocalPlayer
+			_G.target = TextBox.PlaceholderText
+			if _G.target then
+				_G.targetplr = game:GetService("Players"):FindFirstChild(_G.target)
+				if _G.targetplr ~= nil and _G.targetplr.character ~= nil then
+					_G.user.character.HumanoidRootPart.CFrame = _G.targetplr.character.HumanoidRootPart.CFrame
+				local args = {
+   				 [1] = {
+      			  ["EmoteName"] = "Action4",
+       			 ["Event"] = "PeerAction",
+       			 ["Action"] = "replicateEmoteAction"
+   						 }
+					}
+
+				game:GetService("Players").LocalPlayer.Remotes.MainEvent:FireServer(unpack(args))
+
+				local args = {
+   				[1] = {
+       			 ["EmoteName"] = "Action7",
+       			 ["Event"] = "PeerAction",
+       			 ["Action"] = "replicateEmoteAction"
+   					 }
+					}
+
+					game:GetService("Players").LocalPlayer.Remotes.MainEvent:FireServer(unpack(args))
+
+	local args = {
+   	 [1] = {
+        ["EmoteName"] = "Action2",
+        ["Event"] = "PeerAction",
+        ["Action"] = "replicateEmoteAction"
+    }
+	}
+
+	game:GetService("Players").LocalPlayer.Remotes.MainEvent:FireServer(unpack(args))
+
+	local args = {
+    [1] = {
+        ["EmoteName"] = "Action1",
+        ["Event"] = "PeerAction",
+        ["Action"] = "replicateEmoteAction"
+    }
+	}
+
+	game:GetService("Players").LocalPlayer.Remotes.MainEvent:FireServer(unpack(args))
+
+	local args = {
+    [1] = {
+        ["EmoteName"] = "Action3",
+        ["Event"] = "PeerAction",
+        ["Action"] = "replicateEmoteAction"
+    }
+	}
+
+	game:GetService("Players").LocalPlayer.Remotes.MainEvent:FireServer(unpack(args))
+				end
+			end
+		end
+	end)
+end
 
 				
 					
