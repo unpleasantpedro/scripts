@@ -465,20 +465,6 @@ end
 
 
 
-local function close()
-	print(_G.opened)
-	if _G.opened == true or _G.opened == nil then
-		Frame:TweenSize(UDim2.new(0, 0, 1, 0, "InOut", "Quad", 0.5))
-		_G.opened = false
-		return(false)
-	elseif _G.opened == false then
-		Frame:TweenSize(UDim2.new(17.412, 0, 1, 0, "InOut", "Quad", 0.5))
-		_G.opened = true
-		return(true)
-	end
-end
-
-_G.opened = close()
 
 local function aaaa()
 	_G.user = game.Players.LocalPlayer
@@ -643,7 +629,6 @@ end
 				
 					
 TextButton.MouseButton1Down:Connect(test)
-x.MouseButton1Down:Connect(close)
 button1.MouseButton1Down:Connect(test2)
 jail.MouseButton1Down:Connect(aaaa)
 button2.MouseButton1Down:Connect(out)
