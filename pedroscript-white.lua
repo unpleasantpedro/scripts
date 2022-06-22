@@ -36,6 +36,7 @@ Frame.Image = "rbxassetid://3570695787"
 Frame.ImageColor3 = Color3.new(0.231373, 0.231373, 0.231373)
 Frame.ScaleType = Enum.ScaleType.Slice
 Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = (0.167)
 
 DropShadow.Name = "DropShadow"
 DropShadow.Parent = Frame
@@ -48,6 +49,7 @@ DropShadow.Image = "rbxassetid://3570695787"
 DropShadow.ImageColor3 = Color3.new(0.160784, 0.160784, 0.168627)
 DropShadow.ScaleType = Enum.ScaleType.Slice
 DropShadow.SliceCenter = Rect.new(100, 100, 100, 100)
+DropShadow.SliceScale = (0.167)
 
 Frame_2.Name = "Frame"
 Frame_2.Parent = Frame
@@ -60,6 +62,7 @@ Frame_2.ZIndex = 2
 Frame_2.Image = "rbxassetid://3570695787"
 Frame_2.ScaleType = Enum.ScaleType.Slice
 Frame_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_2.SliceScale = (0.167)
 
 TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -102,6 +105,7 @@ TextBox_Roundify_2px.ZIndex = 2
 TextBox_Roundify_2px.Image = "rbxassetid://3570695787"
 TextBox_Roundify_2px.ScaleType = Enum.ScaleType.Slice
 TextBox_Roundify_2px.SliceCenter = Rect.new(100, 100, 100, 100)
+TextBox_Roundify_2px.SliceScale = (0.167)
 
 x.Name = "x"
 x.Parent = Frame
@@ -146,6 +150,7 @@ TextButton_Roundify_2px.ZIndex = 3
 TextButton_Roundify_2px.Image = "rbxassetid://3570695787"
 TextButton_Roundify_2px.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_2px.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_2px.SliceScale = (0.167)
 
 jail.Name = "jail"
 jail.Parent = Frame
@@ -175,6 +180,7 @@ TextButton_Roundify_2px_2.ZIndex = 3
 TextButton_Roundify_2px_2.Image = "rbxassetid://3570695787"
 TextButton_Roundify_2px_2.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_2px_2.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_2px_2.SliceScale = (0.167)
 
 button4.Name = "button4"
 button4.Parent = Frame
@@ -204,6 +210,7 @@ TextButton_Roundify_2px_3.ZIndex = 3
 TextButton_Roundify_2px_3.Image = "rbxassetid://3570695787"
 TextButton_Roundify_2px_3.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_2px_3.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_2px_3.SliceScale = (0.167)
 
 button3.Name = "button3"
 button3.Parent = Frame
@@ -233,6 +240,7 @@ TextButton_Roundify_2px_4.ZIndex = 3
 TextButton_Roundify_2px_4.Image = "rbxassetid://3570695787"
 TextButton_Roundify_2px_4.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_2px_4.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_2px_4.SliceScale = (0.167)
 
 button2.Name = "button2"
 button2.Parent = Frame
@@ -262,6 +270,7 @@ TextButton_Roundify_2px_5.ZIndex = 3
 TextButton_Roundify_2px_5.Image = "rbxassetid://3570695787"
 TextButton_Roundify_2px_5.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_2px_5.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_2px_5.SliceScale = (0.167)
 
 button1.Name = "button1"
 button1.Parent = Frame
@@ -291,6 +300,7 @@ TextButton_Roundify_2px_6.ZIndex = 3
 TextButton_Roundify_2px_6.Image = "rbxassetid://3570695787"
 TextButton_Roundify_2px_6.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_2px_6.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_2px_6.SliceScale = (0.167)
 
 button5.Name = "button5"
 button5.Parent = Frame
@@ -320,6 +330,7 @@ TextButton_Roundify_2px_7.ZIndex = 3
 TextButton_Roundify_2px_7.Image = "rbxassetid://3570695787"
 TextButton_Roundify_2px_7.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_2px_7.SliceCenter = Rect.new(100, 100, 100, 100)
+TextButton_Roundify_2px_7.SliceScale = (0.167)
 
 annoylbl.Name = "annoylbl"
 annoylbl.Parent = Frame
